@@ -1,5 +1,144 @@
-template-repository (1.0-1) unstable; urgency=medium
+pycountry (22.3.5+ds1-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version.
+    - refresh patches
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Stuart Prescott <stuart@debian.org>  Tue, 08 Mar 2022 22:59:34 +1100
+
+pycountry (20.7.3+ds1-3) unstable; urgency=medium
+
+  * Add versioned dependencies to use iso-codes 4.8.0 or newer.
+  * Allow lintian-brush to polish packaging.
+
+ -- Stuart Prescott <stuart@debian.org>  Tue, 21 Dec 2021 10:09:47 +1100
+
+pycountry (20.7.3+ds1-2) unstable; urgency=medium
+
+  * Add patch to make test suite compatible with iso-codes 4.8.0
+    (Closes: #998565).
+
+ -- Stuart Prescott <stuart@debian.org>  Mon, 20 Dec 2021 17:57:03 +1100
+
+pycountry (20.7.3+ds1-1) unstable; urgency=medium
+
+  * New upstream release.
+    - add extra patch to allow tests to pass on uninstalled module.
+  * Move to debhelper-compat 13.
+
+ -- Stuart Prescott <stuart@debian.org>  Sat, 08 Aug 2020 19:51:19 +1000
+
+pycountry (19.8.18+ds1-3) unstable; urgency=medium
+
+  * Only test with py3versions -s in autopkgtests.
+  * Update Standards-Version to 4.5.0 (no changes required).
+
+ -- Stuart Prescott <stuart@debian.org>  Tue, 24 Mar 2020 19:37:34 +1100
+
+pycountry (19.8.18+ds1-2) unstable; urgency=medium
+
+  * Drop Python 2 module package (Closes: #937410).
+  * Update Standards-Version to 4.4.1 (no changes required).
+  * Build against python3-all.
+  * Update autopkgtest tmp dir.
+
+ -- Stuart Prescott <stuart@debian.org>  Sun, 01 Dec 2019 13:24:59 +1100
+
+pycountry (19.8.18+ds1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Set Rules-Requires-Root: no.
+
+ -- Stuart Prescott <stuart@debian.org>  Wed, 25 Sep 2019 01:26:06 +1000
+
+pycountry (19.7.15+ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+   - refresh patches
+  * Update VCS fields to point to salsa.
+  * Add myself to Uploaders.
+  * Update Standards-Version to 4.4.0 (no changes required).
+  * Update to debhelper compat 12.
+
+ -- Stuart Prescott <stuart@debian.org>  Mon, 19 Aug 2019 23:55:03 +1000
+
+pycountry (17.5.14+ds1-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload with maintainer's consent.
+  * New upstream version (Closes: #800892).
+  * Import relevant changes from Ubuntu package, with thanks to
+    Michael Hudson-Doyle <michael.hudson@canonical.com> for the patch.
+    - add missing build-dependency on dh-python
+    - refresh patches for new upstream version
+    - update watch file
+  * Update repackaging to use uscan rather than get-orig-source.
+  * Drop obsoleted dependencies on python-lxml and python3-lxml
+    (Closes: #783036).
+  * Update debhelper compat to recommended level 10.
+  * Point Vcs-* fields at https canonical values.
+  * Drop unneeded entries from debian/copyright.
+  * Drop unneeded use of dpkg-parsechangelog from debian/rules
+  * Add autopkgtest tests to package.
+  * Update Standards-Version to 4.1.0 (no changes required).
+
+ -- Stuart Prescott <stuart@debian.org>  Sat, 09 Sep 2017 15:02:28 +1000
+
+pycountry (1.8+ds1-0.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add 01-disable-failing-asserts.patch (Closes: #821892)
+
+ -- Daniel Silverstone <dsilvers@digital-scurf.org>  Sat, 28 Jan 2017 23:27:30 +0000
+
+pycountry (1.8+ds1-0.1) unstable; urgency=medium
+
+  * New upstream release
+  * Non-maintainer upload.
+  * New package python3-pycountry
+  * Add unzip as Build-Dependency
+  * Remove 02-support_language_common-name.patch, as already merged upstream
+  * debian/watch:
+    + Use .zip urls to watch, in which pycountry > 1.5 is shipped.
+  * debian/rules:
+    + Remove pycountry.egg-info when cleaning
+    + Use --show-field when parsing changelog
+    + Run unit-tests in new upstream
+    + Unzip ".zip" files in get-orig-source
+
+ -- Michele Orru` <maker@python.it>  Wed, 09 Jul 2014 20:49:46 +0200
+
+pycountry (0.14.1+ds1-3) unstable; urgency=low
+
+  * Support "common_name" attribute for languages, thanks to
+    Jerome Flesch (Closes: #693739).
+
+ -- David Paleino <dapal@debian.org>  Tue, 20 Nov 2012 19:14:08 +0100
+
+pycountry (0.14.1+ds1-2) unstable; urgency=low
+
+  * Oops, install README.txt in the appropriate place (Closes: #644348)
+
+ -- David Paleino <dapal@debian.org>  Wed, 05 Oct 2011 09:40:34 +0200
+
+pycountry (0.14.1+ds1-1) unstable; urgency=low
+
+  * New upstream version
+  * Package switched from pysupport to dh_python2
+  * Refreshed patches
+  * Updated copyright file
+
+ -- David Paleino <dapal@debian.org>  Tue, 13 Sep 2011 08:38:23 +0200
+
+pycountry (0.12.1+ds1-2) unstable; urgency=low
+
+  * Bump Standards-Version to 3.9.2, no changes needed
+  * Added dependency on python-lxml (Closes: #626395)
+  * Prevent logger warning when importing, thanks to Johannes Weißl
+    (Closes: #599369)
+
+ -- David Paleino <dapal@debian.org>  Wed, 11 May 2011 23:31:44 +0200
+
+pycountry (0.12.1+ds1-1) unstable; urgency=low
+
+  * Initial release (Closes: #586130)
+
+ -- David Paleino <dapal@debian.org>  Thu, 24 Jun 2010 14:06:22 +0200

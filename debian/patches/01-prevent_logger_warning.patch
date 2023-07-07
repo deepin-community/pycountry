@@ -1,0 +1,22 @@
+From: Johannes Weißl <jargon@molb.org>
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=599369
+Origin: vendor
+Forwarded: https://intra.gocept.com/projects/issues/8081
+
+---
+ src/pycountry/db.py |   11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+--- a/src/pycountry/db.py
++++ b/src/pycountry/db.py
+@@ -7,6 +7,10 @@
+ 
+ logger = logging.getLogger("pycountry.db")
+ 
++# Prevent warning, see
++# http://docs.python.org/library/logging.html#configuring-logging-for-a-library
++logger.addHandler(logging.NullHandler())
++
+ 
+ class Data:
+     def __init__(self, **fields):
