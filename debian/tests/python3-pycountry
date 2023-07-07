@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e -u
+
+cp -r src/pycountry/tests/ "$AUTOPKGTEST_TMP"
+cd "$AUTOPKGTEST_TMP/tests/"
+export PYTHONWARNINGS=d
+
+for py in $(py3versions -s); do
+    $py -m pytest .
+done

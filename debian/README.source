@@ -1,0 +1,10 @@
+pycountry for Debian
+--------------------
+
+The original tarball has been repacked to remove the embedded copy of
+iso-codes. To get it, run:
+
+  $ uscan
+
+The unnecessary files are removed by mk-origtargz based on the Files-Excluded
+field in debian/copyright.
